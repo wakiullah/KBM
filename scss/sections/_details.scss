@@ -1,0 +1,23 @@
+main {
+    & .details {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.603)), url(./../img2/madrasah.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        & .ditails-wapper {
+            height: 270px;
+            & .single-ditails {
+                & .ditails-title {
+                    & p {
+                        color: $white;
+                    }
+                }
+            }
+        }
+        @media (max-width: 655px) {
+            padding: 0px 20px;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+@mixin log-button {
+    padding: 7px 25px 6px 25px;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+@mixin button {
+    padding: 8px 25px 7px 25px;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+@mixin hover-list {
+    &:hover .hover-list {
+        transform: scaleY(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    & .hover-list {
+        transform: scaleY(0);
+        transition: .2s;
+        transform-origin: top;
+        opacity: 0;
+        visibility: hidden;
+        top: 110%;
+        left: -20px;
+        & ul {
+            & li {
+                width: 200px;
+                margin-right: 0px;
+                display: block;
+                background: $purple;
+                padding: 8px 5px 8px 20px;
+                border-bottom: 1px solid $green;
+                &:first-child {
+                    border-top: 1px solid $green;
+                }
+                &:last-child {
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -3px;
+                        left: 0;
+                        width: 0%;
+                        height: 3px;
+                        background: $green;
+                        transition: .6s;
+                    }
+                    &:hover::after {
+                        width: 100%;
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: -3px;
+                        right: 0;
+                        width: 0%;
+                        height: 3px;
+                        background: $green;
+                        transition: .6s;
+                    }
+                    &:hover::before {
+                        width: 100%;
+                    }
+                    &:hover {
+                        transform: scale(1);
+                    }
+                }
+                &:hover {
+                    background: lighten($color: $purple, $amount: 5);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.show-picture {
+    display: none;
+    width: 45%;
+    height: 80%;
+    background: url(../../../img/5.jpg);
+    background-repeat: no-repeat !important;
+    background-position: bottom !important;
+    background-size: cover !important;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: 10000;
+    // img {
+    //     min-width: 100%;
+    //     height: auto;
+    //     padding: 20px;
+    //     text-align: center;
+    //     margin: auto;
+    // }
+    p {
+        background-color: red;
+        display: inline-block;
+        margin-left: 94%;
+        margin-top: 1%;
+        width: 30px;
+        color: white;
+        text-align: center;
+        font-weight: 900;
+        &:hover {
+            background-color: rgb(255, 255, 255);
+            color: red;
+            cursor: pointer;
+        }
+    }
+}

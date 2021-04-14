@@ -1,0 +1,21 @@
+main {
+    & .madrasah-project {
+        margin-bottom: 40px;
+        & .left-project {
+            & .left-project-wapper {
+                margin-top: 50px;
+                & .single-projct {
+                    @extend .simple-project;
+                }
+            }
+        }
+        & .right-project {
+            & .right-project-wapper {
+                margin-top: 50px;
+                & .single-projct {
+                    @extend .simple-project
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.header-wapper {
+    z-index: 1000000;
+    & .main-menu {
+        & ul {
+            margin-top: 4px;
+            & li {
+                position: relative;
+                margin-right: 40px;
+                color: darken($white, 12);
+                & svg {
+                    margin-top: 5px;
+                    margin-left: 5px;
+                }
+                & .logIn-btn {
+                    @include log-button;
+                    background-color: $green;
+                    margin-right: 0;
+                    color: $white;
+                    &:hover .logIn-btn {
+                        transform: scale(2 !important);
+                    }
+                }
+                &:last-child {
+                    margin-right: 0;
+                    transition: .3s;
+                    &::after {
+                        content: '';
+                        width: 0%;
+                        height: 0px;
+                    }
+                    &::before {
+                        content: '';
+                        width: 0%;
+                        height: 0px;
+                    }
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+                &:hover {
+                    color: $white;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -3px;
+                    left: 0;
+                    width: 0%;
+                    height: 4px;
+                    background: $green;
+                    transition: .6s;
+                }
+                &:hover::after {
+                    width: 100%;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: -3px;
+                    right: 0;
+                    width: 0%;
+                    height: 4px;
+                    background: $green;
+                    transition: .6s;
+                }
+                &:hover::before {
+                    width: 100%;
+                }
+                &.prosasonik {
+                    @include hover-list;
+                }
+                &.acadamic {
+                    @include hover-list;
+                }
+                &.janun {
+                    @include hover-list;
+                }
+                @media (max-width:1024px) {
+                    margin-right: 20px;
+                    & svg {
+                        margin-left: 4px;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 655px) {
+        padding: 0px 20px;
+    }
+}

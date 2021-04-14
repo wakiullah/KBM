@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+body {
+    font-family: 'Hind Siliguri';
+    scroll-behavior: smooth;
+}
+
+p {
+    font-size: 18px;
+}
+
+a {
+    font-size: 17px;
+}
+
+img {
+    max-width: 100%;
+}
+
+main {
+    min-width: 100%;
+}
+
+;
+@import "./subfiles/variables";
+@import "./subfiles/mixins";
+@import "./sections/classes";
+@import "./sections/animations";
+@import "./sections/header";
+@import "./sections/slider";
+@import "./sections/features";
+@import "./sections/details";
+@import "./sections/mad-intro";
+@import "./sections/projects";
+@import "./sections/photo-glarry";
+@import "./sections/footer";
+@import "./sections/show-pic";
